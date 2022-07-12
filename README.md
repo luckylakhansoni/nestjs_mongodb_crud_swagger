@@ -1,4 +1,4 @@
-##### NEO TECH SOLUTION ASSIGNMENT ######
+##### SELF ASSIGNMENT ######
 
 step 1 npm install
 
