@@ -1,5 +1,5 @@
 {
-  "name": "indexing-service",
+  "name": "crud",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -21,9 +21,7 @@
     "format:fix": "pretty-quick --staged",
     "pre-commit": "npm run lint:fix && npm run lint",
     "lint": "tslint -p tsconfig.json -c tslint.json",
-    "lint:fix": "tslint --fix -p tsconfig.json -c tslint.json",
-    "docker:build-dev": "docker build -t himeshneo/iifl-backend:solr-indexing-service-dev .",
-    "docker:push-dev": "docker push himeshneo/iifl-backend:solr-indexing-service-dev"
+    "lint:fix": "tslint --fix -p tsconfig.json -c tslint.json"
   },
   "husky": {
     "hooks": {

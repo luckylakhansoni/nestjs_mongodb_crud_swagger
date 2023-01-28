@@ -83,7 +83,7 @@ export class EmployeeService {
       is_delete: false,
     });
     if (!user) {
-      throw new NotFoundException("Employee not foud with entered id!");
+     return "Employee not foud with entered id!";
     }
     const existingEmployee = await this.EmployeeSchema.updateOne(
       { _id: id },
@@ -97,10 +97,7 @@ export class EmployeeService {
   ): Promise<IEmployee[]> {
     const EmployeeData = await this.EmployeeSchema.find({ is_delete: true })
       .skip(getEmployeeListDto.page)
-      .limit(getEmployeeListDto.limit);
-    if (!EmployeeData || EmployeeData.length == 0) {
-      throw new NotFoundException("Deleted Employees data not found!");
-    }
+      .limit(getEmployeeListDto.limit); 
     return EmployeeData;
   }
 }
